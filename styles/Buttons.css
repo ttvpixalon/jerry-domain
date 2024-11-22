@@ -1,0 +1,117 @@
+/* Button Container */
+.button-container {
+  display: flex; /* Arrange buttons horizontally */
+  justify-content: center; /* Center buttons horizontally */
+  align-items: center; /* Center vertically */
+  gap: 20px; /* Add consistent spacing between buttons */
+  margin-top: 20px; /* Space below the heading */
+  flex-wrap: wrap; /* Allow buttons to wrap if screen is too narrow */
+}
+
+/* Button Styling */
+.button-49 {
+  width: 200px; /* Fixed button width */
+  height: 65px; /* Fixed button height */
+  line-height: 65px; /* Match line-height to center text vertically */
+  font-size: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00E6F6;
+  outline: transparent;
+  position: relative; /* Important for positioning the glitch layer */
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-align: center; /* Ensure text is centered horizontally */
+  cursor: pointer;
+  overflow: hidden; /* Prevent any visual overflow */
+  border-radius: 20px; /* Rounds the rectangle */
+  margin: 10px; /* Add spacing around each button */
+  z-index: 2; /* Ensure the button is on top of other elements */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth hover effects */
+}
+
+/* Glitch Layer */
+.button-49:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+
+  content: attr(data-text); /* Text for glitch effect */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+  z-index: 3; /* Bring glitch layer above the button background */
+  pointer-events: none; /* Prevent interaction with the glitch layer */
+}
+
+/* Hover Effect */
+.button-49:hover {
+  box-shadow: 0 0 20px 5px #00FFFF, 0 0 40px 10px #00FFFF, 0 0 60px 15px #00FFFF; /* Neon glow effect */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.button-49:hover:after {
+  animation: glitch 1s infinite; /* Restore the original glitch animation */
+  animation-timing-function: steps(2, end);
+}
+
+/* Glitch Animation */
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
