@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<head>
+<title>Project</title>
+<link rel="stylesheet" href="styles/Jerry_Style.css">
+<link rel="stylesheet" href="styles/Buttons.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+/* Styling for the Button */
+.bottom-corner-button {
+position: fixed; /* Fix the button to the screen */
+bottom: 20px; /* Distance from the bottom */
+right: 20px; /* Distance from the right */
+background-color: #FF013C; /* Button background color */
+color: white; /* Text/emoji color */
+font-size: 24px; /* Adjust emoji size */
+border: none; /* Remove border */
+border-radius: 50%; /* Make the button circular */
+width: 60px; /* Set button width */
+height: 60px; /* Set button height */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+cursor: pointer; /* Pointer cursor on hover */
+z-index: 100; /* Ensure it's above other elements */
+}
+
+/* Hover Effect */
+.bottom-corner-button:hover {
+background-color: #00E6F6; /* Change background color on hover */
+transform: scale(1.1); /* Slightly enlarge the button */
+transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* Fullscreen Loader */
+#preloader {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: #000;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 9999;
+}
+
+/* Hide Main Content Initially */
+#content {
+display: none;
+}
+
+video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+</style>
+<body>
+
+
+<!-- Preloader with MP4 Video -->
+<div id="preloader">
+<video autoplay muted>
+<source src="video/50833-462033983.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+<script>
+// Check if the loading screen has already been shown
+if (localStorage.getItem('loadingPlayed')) {
+// If already played, skip the preloader
+document.getElementById("preloader").style.display = "none";
+document.getElementById("content").style.display = "block";
+} else {
+// If not played, show the preloader and hide it after 5 seconds
+setTimeout(() => {
+document.getElementById("preloader").style.display = "none";
+document.getElementById("content").style.display = "block";
+localStorage.setItem('loadingPlayed', true); // Set flag in localStorage
+}, 5000); // Adjust duration as needed
+}
+</script>
+
+<!-- Background Video -->
+<div class="background">
+<video autoplay loop muted playsinline>
+<source src="video/City light.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+<div class="hero-container">
+<div class="environment"></div>
+<h2 class="hero glitch layers" data-text="Jeremiah Kisaakye"><span>Jeremiah Kisaakye</span></h2>
+<h2 class="hero glitch layers" data-text="ツ"><span>ツ</span></h2>
+</div>
+</section>
+
+<div class="button-container">
+<a href="Project.html">
+<button class="button-49" data-text="Home">Home</button></a>
+<button class="button-49" data-text="My First HTML">My First HTML</button>
+<a href="The Tree.html">
+<button class="button-49" data-text="The Tree">The Tree</button></a>
+<a href="Work.html">
+<button class="button-49" data-text="Favorite Song">Favorite Song</button></a>
+<a href="Expectations.html">
+<button class="button-49" data-text="Catholic Board">Catholic Board</button></a>
+</div>
+
+
+<!-- Audio Element for Background Music -->
+<audio id="background-music" autoplay loop style="display: none;">
+<source src="audio/Lost in Time (MJ VERSION) (mp3cut.net).mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<!-- Button in the Bottom Corner -->
+<button class="bottom-corner-button" onclick="toggleMusic()">🙃</button>
+
+<!-- Inline JavaScript to Toggle Music -->
+<script>
+function toggleMusic() {
+const audio = document.getElementById('background-music');
+if (audio.paused) {
+audio.play(); // Play the music
+} else {
+audio.pause(); // Pause the music
+}
+}
+</script>
+
+</audio>
+
+<script>
+  // Disable right-click
+  document.addEventListener('contextmenu', event => event.preventDefault());
+
+  // Disable specific key combinations (e.g., Ctrl+Shift+I, F12)
+  document.addEventListener('keydown', event => {
+    if (event.ctrlKey && (event.key === 'u' || event.key === 's' || event.key === 'i')) {
+      event.preventDefault();
+    }
+    if (event.key === 'F12') {
+      event.preventDefault();
+    }
+  });
+</script>
+
+
+
+
+<center>
+<h1>What is web designing?</h1>
+</center>
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F4fbwKV9dBU?si=plGA4p9wrs7k2_VM" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+
+<center>
+<div class="box">
+Web designing is the process of planning, conceptualizing, and implementing the plan for designing a website in a way that is functional and offers a good user experience. User experience is central to the web designing process. Websites have an array of elements presented in ways that make them easy to navigate. Web designing essentially involves working on every attribute of the website that people interact with, so that the website is simple and efficient, allows users to quickly find the information they need, and looks visually pleasing. All these factors, when combined, decide how well the website is designed.
+</div>
+</center>
+
+</body>
+</html>

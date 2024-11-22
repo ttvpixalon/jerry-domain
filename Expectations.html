@@ -1,0 +1,143 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Expectations</title>
+<meta name="description" content="This is the description that search engines will display. Aim for 145-155 characters.">
+<meta name="author" content="Insert the content author or owner name here">
+<link rel="stylesheet" href="styles/Jerry_Style.css">
+<link rel="stylesheet" href="styles/Buttons.css">
+<style>
+@font-face {
+font-family: 'Cyberpunk';
+src: url('../Fonts/Cyberpunk.ttf') format('truetype');
+}
+
+h1,h2 {
+font-family: 'Cyberpunk', sans-serif;
+font-size: 3rem;
+color: white;
+text-align: center;
+margin-top: 50px;
+}
+
+img {
+margin: 10px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+border-radius: 10px; /* Optional: Add rounded corners for better aesthetics */
+}
+
+img:hover {
+transform: scale(1.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+-webkit-box-shadow: 0px 0px 127px 20px rgba(0, 255, 255, 0.73); /* Cyan Glow */
+-moz-box-shadow: 0px 0px 127px 20px rgba(0, 255, 255, 0.73);
+box-shadow: 0px 0px 127px 20px rgba(0, 255, 255, 0.73);
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background Video -->
+<div class="background">
+<video autoplay loop muted playsinline>
+<source src="video/6912368_Motion Graphics_Motion Graphic_1920x1080.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+<div class="hero-container" style="position: relative; text-align: center; padding: 50px 20px;">
+  <!-- Semi-transparent overlay -->
+  <div class="environment" style="
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    backdrop-filter: blur(5px); 
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;">
+  </div>
+
+  <!-- Heading with glitch effect -->
+  <h2 class="hero glitch layers" 
+      data-text="Profile of The Bahamas Catholic Board of Education Graduate" 
+      style="
+        position: relative; 
+        z-index: 2; 
+        font-size: 2rem; 
+        font-family: 'Cyberpunk'; 
+        text-transform: uppercase; 
+        color: white; 
+        animation: glitch-animation 1s infinite; 
+        text-shadow: 2px 2px 2px rgba(255, 0, 255, 0.8), -2px -2px 0px rgba(0, 255, 255, 0.8);">
+    <span>Profile of The Bahamas Catholic Board of Education Graduate</span>
+  </h2>
+  
+  <!-- Inline Glitch Keyframes -->
+  <style>
+    @keyframes glitch-animation {
+      0% {
+        text-shadow: 2px 2px 2px rgba(255, 0, 255, 0.8), -2px -2px 0px rgba(0, 255, 255, 0.8);
+        transform: translate(1px, 1px);
+      }
+      20% {
+        text-shadow: -2px -2px 2px rgba(0, 255, 255, 0.8), 2px 2px 0px rgba(255, 0, 255, 0.8);
+        transform: translate(-1px, -1px);
+      }
+      40% {
+        text-shadow: 2px -2px 2px rgba(255, 0, 255, 0.8), -2px 2px 0px rgba(0, 255, 255, 0.8);
+        transform: translate(1px, -1px);
+      }
+      60% {
+        text-shadow: -2px 2px 2px rgba(0, 255, 255, 0.8), 2px -2px 0px rgba(255, 0, 255, 0.8);
+        transform: translate(-1px, 1px);
+      }
+      80% {
+        text-shadow: 2px 2px 2px rgba(255, 0, 255, 0.8), -2px -2px 0px rgba(0, 255, 255, 0.8);
+        transform: translate(1px, 1px);
+      }
+      100% {
+        text-shadow: 2px 2px 2px rgba(255, 0, 255, 0.8), -2px -2px 0px rgba(0, 255, 255, 0.8);
+        transform: translate(0, 0);
+      }
+    }
+  </style>
+</div>
+
+
+
+<div class="button-container">
+<a href="Project.html">
+<button class="button-49" data-text="Home">Home</button></a>
+<button class="button-49" data-text="My First HTML">My First HTML</button>
+<a href="The Tree.html">
+<button class="button-49" data-text="The Tree">The Tree</button></a>
+<a href="Work.html">
+<button class="button-49" data-text="Favorite Song">Favorite Song</button></a>
+<button class="button-49" data-text="Catholic Board">Catholic Board</button>
+</div>
+
+<div class="box"><ul>
+<li>A CHRISTIAN LEADER</li>
+<li>AN ACADEMICALLY CAPABLE PERSON</li>
+<li>A CENTERED, WELL-ROUNDED PERSON</li>
+<li>A LOVING PERSON</li>
+<li>A LIFE LONG LEARNER</li>
+<li>A HEALTHY PERSON </li>
+<li>AN ENVIRONMENTALLY CONSCIOUS PERSON</li>
+<li>A FINANCIALLY ADEPT PERSON</li>
+</ul>
+</div>
+
+<a href="http://ac.cec.edu.bs/">
+<h1 style="color: rgb(0, 0, 0);">JEREMIAH KISAAKYE</h1></a>
+
+<center><img src="images/img1.jpg" alt="Jerry1"></center>
+
+</body>
+
+</html>
